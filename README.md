@@ -1,4 +1,4 @@
 # ¡Bienvenidos a la fábrica de robots!
-Este es mi proyecto de aprendizaje mientras construyo un currículo web decente. Siéntete libre de revisarlo, utilizarlo y aprender con él tú también.
+Este es mi proyecto de aprendizaje vital, una página web infinita y al mismo tiempo un CV. Pablo NaKai CC BY-SA
 
-¡Ah!, y no olvides pasarte por [aquí](https://pablonakai.tk) para ver el resultado final &#128521; .
+¡Ah!, y no olvides pasarte por [aquí](https://pablonakai.com) para ver el resultado final &#128521; .
