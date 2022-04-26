@@ -98,6 +98,8 @@ table {
     border-top: 10px solid #171717;
     border-right: 10px solid #171717;
     border-left: 10px solid #171717;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
     z-index: 1;
 }
 
@@ -122,8 +124,9 @@ table {
 ===========*/
 
 #container {
-    max-width: 50%;
+    max-width: 49%;
     margin: 200px auto;
+    text-align: justify;
     z-index: 100;
 }
 
