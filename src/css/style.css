@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @font-face {
     font-family: FFFTusj; 
     src: url(../fonts/FFFTusj.ttf);
+}
+
+:root {
+    --orange-branding: #FF9A19;
+    --blue-branding: #00A8FF;
+    --dark-blue-branding: #0075B2;
+    --grey-branding: #353535;
+    --text-color: #171717;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -25,25 +34,30 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -54,53 +68,51 @@ table {
 ==========*/
 
 #main_header {
-    width: 100%;
-    height: 100px;
+    width: 99%; height: 110px;
     position: fixed;
-    top: 0;
-    background-image: url("../img/banner_grey.png");
+    top: 10px; left: 50%;
+    transform: translate(-50%, 0);
+    background-image: url("../img/banner_blue.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
-    border-bottom: 10px solid #171717;
-    font-family: 'FFFTusj', sans-serif;
+    border-bottom: 10px solid var(--dark-blue-branding);
+    border-radius: 6px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 #logo {
-    width: 200px;
-    height: 200px;
+    width: 200px; height: 200px;
     position: absolute;
-    left: 50px;
+    top: 10px; left: 50px;
     background-color: #fff;
     border-width: 10px;
     border-style: solid;
     border-color: #fff;
     border-radius: 50%;
-    border-top-color: #171717;
-    border-right-color: #171717;
+    border-top-color: var(--dark-blue-branding);
+    border-right-color: var(--dark-blue-branding);
     transform: rotate(-45deg);
 }
 
 #logo img {
-    width: 200px;
-    height: auto;
+    width: 200px; height: auto;
     transform: rotate(45deg);
 }
 
 #nav {
-    width: 50%;
-    height: 90px;
+    width: 50%; height: 90px;
     margin: 0 auto;
     position: relative;
-    bottom: -10px;
+    bottom: -20px;
     text-align: center;
-    background-color: #fff;
-    border-top: 10px solid #171717;
-    border-right: 10px solid #171717;
-    border-left: 10px solid #171717;
+    background-color: var(--dark-blue-branding);
+    border-top: 10px solid var(--dark-blue-branding);
+    border-right: 10px solid var(--dark-blue-branding);
+    border-left: 10px solid var(--dark-blue-branding);
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    z-index: 1;
 }
 
 #menu li {
@@ -114,22 +126,45 @@ table {
 }
 
 #menu li a {
-    color: #212121;
+    color: white;
     text-decoration: none;
     font-size: 30pt;
+    font-family: 'Fredoka One', cursive;
 }
 
 /*===========
 ---CONTENT---
 ===========*/
 
-#container {
-    max-width: 49%;
-    margin: 200px auto;
-    text-align: justify;
-    z-index: 100;
+main#container {
 }
 
-#container section {
-    margin-bottom: 90px;
+section.section {
+}
+
+.section h1 {
+    font-size: xx-large;
+    font-family: 'FFFTusj', sans-serif;
+}
+
+.section article {
+    width: 70%;
+}
+
+section.section img {
+    height: 200px;
+}
+
+/*=============
+---CONSTANTS---
+=============*/
+
+.hidden {
+    display: none;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
 }
