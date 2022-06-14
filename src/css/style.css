@@ -1,8 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('http://fonts.cdnfonts.com/css/lucida-sans');
 @font-face {
     font-family: FFFTusj; 
-    src: url(../fonts/FFFTusj.ttf);
+    src: url(../public/fonts/FFFTusj.ttf);
+}
+
+:root {
+    /*Branding colors*/
+    --orange-branding: #FF9A19;
+    --blue-branding: #00A8FF;
+    --dark-blue-branding: #0075B2;
+    --grey-branding: #353535;
+    /*Other web colors*/
+    --bg-dark: #15232d;
+    --bg-medium: #203a49;
+    --bg-light: #62a2c1;
+    --bg-alternative: #ffba30;
+    --text-color: #171717;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -25,25 +43,38 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
+    min-width: 100%; min-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-image: url("../img/bg_white.png");
+    background-repeat: repeat;
+    background-size: contain;
+    background-attachment: fixed;
 	line-height: 1;
+    font-family: 'Lucida Sans', sans-serif;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -53,54 +84,51 @@ table {
 ---HEADER---
 ==========*/
 
-#main_header {
-    width: 100%;
-    height: 100px;
+header#main_header {
+    width: 99%; height: 110px;
     position: fixed;
-    top: 0;
-    background-image: url("../img/banner_grey.png");
+    top: 10px; left: 50%;
+    transform: translate(-50%, 0);
+    background-image: url("../public/img/banner_dark.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
-    border-bottom: 10px solid #171717;
-    font-family: 'FFFTusj', sans-serif;
+    border-bottom: 10px solid var(--blue-branding);
+    border-radius: 6px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    z-index: 1;
+    
 }
 
-#logo {
-    width: 200px;
-    height: 200px;
+span#logo {
+    width: 200px; height: 200px;
     position: absolute;
-    left: 50px;
-    background-color: #fff;
+    top: 9px; left: 50px;
     border-width: 10px;
     border-style: solid;
-    border-color: #fff;
+    border-color: transparent;
     border-radius: 50%;
-    border-top-color: #171717;
-    border-right-color: #171717;
+    border-top-color: var(--blue-branding);
+    border-right-color: var(--blue-branding);
     transform: rotate(-45deg);
 }
 
 #logo img {
-    width: 200px;
-    height: auto;
+    clip-path: circle(90px);
+}
+
+#logo img {
+    width: 200px; height: auto;
     transform: rotate(45deg);
 }
 
 #nav {
-    width: 50%;
-    height: 90px;
-    margin: 0 auto;
-    position: relative;
-    bottom: -10px;
+    width: 50%; height: 90px;
+    margin: 20px auto;
     text-align: center;
-    background-color: #fff;
-    border-top: 10px solid #171717;
-    border-right: 10px solid #171717;
-    border-left: 10px solid #171717;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    z-index: 1;
 }
 
 #menu li {
@@ -113,23 +141,175 @@ table {
     margin-right: 0;
 }
 
-#menu li a {
-    color: #212121;
+ul#menu li a {
+    color: white;
     text-decoration: none;
-    font-size: 30pt;
+    font-size: xx-large;
+    font-weight: 900;
+    font-family: 'Lato', sans-serif;
+}
+
+ul#menu li:last-child a {
+    color: grey;
+}
+
+section#home {
 }
 
 /*===========
 ---CONTENT---
 ===========*/
 
-#container {
-    max-width: 49%;
-    margin: 200px auto;
-    text-align: justify;
-    z-index: 100;
+main.container {
+    width: 300vw; height: 100vh;
 }
 
-#container section {
-    margin-bottom: 90px;
+section.section article {
+    width: 90%;
+    text-align: justify;
+}
+
+section.section h1 {
+    text-align: center;
+}
+
+main#landing_main {
+    display: flex;
+    align-items: stretch;
+}
+
+main#landing_main section {
+    width: 100vw; height: 92vh;
+    z-index: 0;
+}
+
+main#landing_main aside {
+    width: 60%; height: 40%;
+    margin: 37vh auto;
+}
+
+main#landing_main img {
+    width: 25%;
+}
+
+main#landing_main h1 {
+    letter-spacing: 4pt;
+    font-size: xx-large;
+    font-family: 'FFFTusj', sans-serif;
+}
+
+#landing_down-arrow {
+    width: 100%; height: 8vh;
+    background-color: var(--bg-alternative);
+    z-index: 1;
+}
+
+main#landing_board section {
+    width: 100vw; height: 70vh;
+    display: flex;
+    align-items: stretch;
+    background-color: var(--bg-light);
+}
+
+main#landing_board aside {
+    width: 40%;
+    margin: 20vh auto;
+}
+
+main#landing_board img {
+    z-index: 0;
+}
+
+aside#first img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: rotate(-3deg);
+}
+
+aside#second img {
+    width: 30%;
+    margin-right: 50px;
+    border: 10px solid white;
+    border-bottom: 50px;
+    transform: rotate(3deg);
+}
+
+aside#third img {
+    width: 30%;
+}
+
+aside#fourth img {
+    width: 30%;
+}
+
+aside#fourth h1 {
+    display: inline-block;
+}
+
+main#landing_board h1 {
+    padding: 20px 0;
+    color: white;
+    letter-spacing: 3pt;
+    font-size: x-large;
+    font-weight: 800;
+    font-family: 'Permanent Marker', cursive;
+}
+
+main#landing_board article {
+    width: 60%;
+    margin: 0 auto;
+}
+
+main#landing_highlights img {
+    width: 40%;
+}
+
+main#landing_main section:first-child {
+    background-image: url("https://i.postimg.cc/bvvs061Y/Verano-DVA4-K-vintage.png");
+    background-repeat: no-repeat;
+    background-size: 101% 102%;
+    background-position: center;
+}
+main#landing_highlights section {
+    background-image: url("https://i.postimg.cc/SN0Y0fbV/Verano-DVA4-K.png");
+    background-repeat: no-repeat;
+    background-size: 101% 102%;
+    background-position: center;
+    background-attachment: fixed;
+}
+/*==========
+---FOOTER---
+==========*/
+
+#footer {
+    width: 100%; height: 200px;
+    background-image: url("../public/img/banner_dark.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    border-top: 5px solid var(--blue-branding);
+    color: #fff;
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+}
+
+section#diary {
+    
+}
+/*=============
+---CONSTANTS---
+=============*/
+
+.hidden {
+    display: none;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
 }
