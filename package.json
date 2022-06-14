@@ -1,0 +1,30 @@
+{
+  "name": "github-pages",
+  "version": "1.0.0",
+  "description": "Este es mi proyecto de aprendizaje vital, una página web infinita y al mismo tiempo un CV. Pablo NaKai CC BY-SA",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloNaKai/my-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PabloNaKai/my-website/issues"
+  },
+  "homepage": "https://github.com/PabloNaKai/my-website#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
