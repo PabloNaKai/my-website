@@ -137,9 +137,14 @@ table {
 ===========*/
 
 main#container {
+    width: 300vw; height: 100vh;
+    display: flex;
+    align-items: stretch;
 }
 
 section.section {
+    width: 100vw; height: 100vh;
+
 }
 
 .section h1 {
